@@ -95,7 +95,7 @@ Request
   "completed": true,
   "dueDate": "2020-05-30",
   "priority": 3,
-  "user_id": 12
+  "userId": 12
 }
 ```
 
@@ -120,7 +120,7 @@ Request
   "completed": false,
   "dueDate": "2019-05-30",
   "priority": 1,
-  "user_id": null
+  "userId": null
 }
 ```
 

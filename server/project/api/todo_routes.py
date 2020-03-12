@@ -51,7 +51,7 @@ def create_or_update_todo():
             response["message"] = "Missing {key} in request body".format(key=key)
             return jsonify(response), 400
 
-    user_id = request_json.get("user_id")
+    user_id = request_json.get("userId")
     if user_id:
         user = User.query.filter_by(user_id=user_id).first()
         if not user:
@@ -74,7 +74,7 @@ def create_or_update_todo():
     todo.completed = request_json["completed"]
     todo.due_date = request_json["dueDate"]
     todo.priority = request_json["priority"]
-    if "user_id" in request_json:
+    if "userId" in request_json:
         todo.user_id = user_id
 
     if request.method == "POST":
