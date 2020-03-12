@@ -45,7 +45,7 @@ def create_or_update_todo():
     # Validation
     keys = ["title", "content", "completed", "dueDate", "priority"]
     if request.method == "PUT":
-        keys.append("todo_id")
+        keys.append("todoId")
     for key in keys:
         if key not in request_json:
             response["message"] = "Missing {key} in request body".format(key=key)
@@ -63,7 +63,7 @@ def create_or_update_todo():
     if request.method == "POST":
         todo = Todo()
     elif request.method == "PUT":
-        todo_id = int(request_json["todo_id"])
+        todo_id = int(request_json["todoId"])
         todo = Todo.query.filter_by(todo_id=todo_id).first()
         if not todo:
             response["message"] = "Todo not found"
@@ -83,6 +83,6 @@ def create_or_update_todo():
     elif request.method == "PUT":
         response["message"] = "Todo updated successfully"
     db.session.commit()
-    response["todo_id"] = todo.todo_id
+    response["todoId"] = todo.todo_id
     
     return jsonify(response), 201

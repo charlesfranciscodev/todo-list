@@ -103,7 +103,7 @@ Response
 ```json
 {
   "message": "Todo created successfully",
-  "todo_id": 17
+  "todoId": 17
 }
 ```
 
@@ -114,7 +114,7 @@ Response
 Request
 ```json
 {
-  "todo_id": 13,
+  "todoId": 13,
   "title": "My Title",
   "content": "This is the content",
   "completed": false,
@@ -128,7 +128,7 @@ Response
 ```json
 {
   "message": "Todo updated successfully",
-  "todo_id": 13
+  "todoId": 13
 }
 ```
 
