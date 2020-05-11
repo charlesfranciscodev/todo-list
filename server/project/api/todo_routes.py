@@ -84,5 +84,5 @@ def create_or_update_todo():
         response["message"] = "Todo updated successfully"
     db.session.commit()
     response["todoId"] = todo.todo_id
-    
+
     return jsonify(response), 201
